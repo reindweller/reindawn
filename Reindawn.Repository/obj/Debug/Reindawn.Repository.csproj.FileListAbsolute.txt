@@ -1,0 +1,44 @@
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\bin\Debug\Reindawn.Repository.dll.config
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\bin\Debug\Reindawn.Repository.dll
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\bin\Debug\Reindawn.Repository.pdb
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\bin\Debug\EntityFramework.dll
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\bin\Debug\Reindawn.Domain.dll
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\bin\Debug\Reindawn.Domain.pdb
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\bin\Debug\EntityFramework.xml
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\obj\Debug\Reindawn.Repository.csprojResolveAssemblyReference.cache
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\obj\Debug\Reindawn.Repository.dll
+C:\Arvin\Projects\Reindawn\PokerShowdown.Repository\obj\Debug\Reindawn.Repository.pdb
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\Reindawn.Repository.dll.config
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\Reindawn.Repository.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\Reindawn.Repository.pdb
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\EntityFramework.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\Reindawn.Domain.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\Reindawn.Domain.pdb
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\EntityFramework.xml
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\obj\Debug\Reindawn.Repository.csprojResolveAssemblyReference.cache
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\obj\Debug\Reindawn.Repository.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Repository\obj\Debug\Reindawn.Repository.pdb
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Reindawn.Repository.dll.config
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Reindawn.Repository.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Reindawn.Repository.pdb
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\EntityFramework.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Reindawn.Domain.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Reindawn.Domain.pdb
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\EntityFramework.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.csprojResolveAssemblyReference.cache
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.pdb

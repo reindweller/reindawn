@@ -1,0 +1,192 @@
+﻿@using Reindawn.Service.IdentityHelper
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                @if (Request.IsAuthenticated)
+                {
+                    @Html.ActionLink(User.Identity.GetBusinessName(), "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                }
+                else
+                {
+                    @Html.ActionLink("Reindawn", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                }
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Main <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Home", "Index", "Income")</li>
+                            <li>@Html.ActionLink("Expenses", "Index", "Expense")</li>
+                            <li>@Html.ActionLink("Transfers", "Index", "Transfer")</li>
+                            <li>@Html.ActionLink("Adjustments", "Index", "Adjustment")</li>
+                            <li>@Html.ActionLink("Check Printing", "Index", "CheckPrinting")</li>
+                            <li>@Html.ActionLink("Banking", "Index", "Banking")</li>
+                            <li>@Html.ActionLink("Fresh Books", "Index", "FreshBook")</li>
+                            <li>@Html.ActionLink("Payroll", "Index", "Payroll")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Reports <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Profit And Loss", "Index", "ProfitAndLoss")</li>
+                            <li>@Html.ActionLink("Balance Sheet", "Index", "BalanceSheet")</li>
+                            <li>@Html.ActionLink("Receivables", "Index", "Receivable")</li>
+                            <li>@Html.ActionLink("Payables", "Index", "Payable")</li>
+                            <li>@Html.ActionLink("Trial Balance", "Index", "TrialBalance")</li>
+                            <li>@Html.ActionLink("General Ledger", "Index", "GeneralLedger")</li>
+                            <li>@Html.ActionLink("Journal", "Index", "Journal")</li>
+                            <li>@Html.ActionLink("Activity", "Index", "Activity")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Settings <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Business Profile", "Index", "BusinessProfile")</li>
+                            <li>@Html.ActionLink("Account", "Index", "Account")</li>
+                            <li>@Html.ActionLink("Account Type", "Index", "AccountType")</li>
+                            <li>@Html.ActionLink("Bank Feeds", "Index", "BankFeed")</li>
+                            <li>@Html.ActionLink("Taxes", "Index", "Tax")</li>
+                            <li>@Html.ActionLink("Customers", "Index", "Customer")</li>
+                            <li>@Html.ActionLink("Vendors", "Index", "Vendor")</li>
+                            <li>@Html.ActionLink("Items", "Index", "Item")</li>
+                        </ul>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div id="navbarleft" class="navbar col-sm-2 navbar-inverse navbar-fixed-left">
+                <ul id="sidebar" class="nav navbar-nav nav-stacked">
+                    @*<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Sub Menu1</a></li>
+                                <li><a href="#">Sub Menu2</a></li>
+                                <li><a href="#">Sub Menu3</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Sub Menu4</a></li>
+                                <li><a href="#">Sub Menu5</a></li>
+                            </ul>
+                        </li>*@
+                    <li>@Html.ActionLink("Income", "Index", "Income")</li>
+                    <li>@Html.ActionLink("Expenses", "Index", "Expense")</li>
+                    <li>@Html.ActionLink("Transfers", "Index", "Transfer")</li>
+                    <li>@Html.ActionLink("Adjustments", "Index", "Adjustment")</li>
+                    <li>@Html.ActionLink("Check Printing", "Index", "CheckPrinting")</li>
+                    <li>@Html.ActionLink("Banking", "Index", "Banking")</li>
+                    <li>@Html.ActionLink("Fresh Books", "Index", "FreshBook")</li>
+                    <li>@Html.ActionLink("Payroll", "Index", "Payroll")</li>
+                </ul>
+
+
+
+                <div class="navbar-header navbar-custom">
+                    <a class="navbar-brand" href="#">Reports</a>
+                </div>
+                <div class="navbar-collapse-reports">
+                    <ul id="sidebar" class="nav navbar-nav nav-stacked">
+                        <li>@Html.ActionLink("Profit And Loss", "Index", "ProfitAndLoss")</li>
+                        <li>@Html.ActionLink("Balance Sheet", "Index", "BalanceSheet")</li>
+                        <li>@Html.ActionLink("Receivables", "Index", "Receivable")</li>
+                        <li>@Html.ActionLink("Payables", "Index", "Payable")</li>
+                        <li>@Html.ActionLink("Trial Balance", "Index", "TrialBalance")</li>
+                        <li>@Html.ActionLink("General Ledger", "Index", "GeneralLedger")</li>
+                        <li>@Html.ActionLink("Journal", "Index", "Journal")</li>
+                        <li>@Html.ActionLink("Activity", "Index", "Activity")</li>
+                    </ul>
+                </div>
+
+                <div class="navbar-header navbar-custom">
+                    <a class="navbar-brand" href="#">Setup</a>
+                </div>
+                <div class="navbar-collapse-setup">
+                    <ul id="sidebar" class="nav navbar-nav nav-stacked">
+                        <li>@Html.ActionLink("Business Profile", "Index", "BusinessProfile")</li>
+                        <li>@Html.ActionLink("Account", "Index", "Account")</li>
+                        <li>@Html.ActionLink("Account Type", "Index", "AccountType")</li>
+                        <li>@Html.ActionLink("Bank Feeds", "Index", "BankFeed")</li>
+                        <li>@Html.ActionLink("Taxes", "Index", "Tax")</li>
+                        <li>@Html.ActionLink("Customers", "Index", "Customer")</li>
+                        <li>@Html.ActionLink("Vendors", "Index", "Vendor")</li>
+                        <li>@Html.ActionLink("Items", "Index", "Item")</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    @* //todo: refactor, put this in its own file *@
+    <script>
+        $(function () {
+
+
+            if ($("#Buy").is(':checked')) {
+                $("#divBuy").show();
+            } else {
+                $("#divBuy").hide();
+            }
+
+            if ($("#Sell").is(':checked')) {
+                $("#divSell").show();
+            } else {
+                $("#divSell").hide();
+            }
+
+            $('#Buy').click(function () {
+                if ($(this).is(':checked')) {
+                    $("#divBuy").show();
+                } else {
+                    $("#divBuy").hide();
+                }
+            });
+
+            $('#Sell').click(function () {
+                if ($(this).is(':checked')) {
+                    $("#divSell").show();
+                } else {
+                    $("#divSell").hide();
+                }
+            });
+
+            
+
+        });
+    </script>
+
+
+</body>
+</html>

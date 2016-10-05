@@ -1,0 +1,28 @@
+﻿
+
+
+@section scripts {
+    <script>
+    $(function() {
+        $("#divBuy").hide();
+        $("#divSell").hide();
+        $('#Buy').click(function() {
+            if ($(this).is(':checked')) {
+                $("#divBuy").show();
+            } else {
+                $("#divBuy").hide();
+            }
+        });
+
+        $('#Sell').click(function() {
+            if ($(this).is(':checked')) {
+                $("#divSell").show();
+            } else {
+                $("#divSell").hide();
+            }
+        });
+
+    });
+
+</script>
+}

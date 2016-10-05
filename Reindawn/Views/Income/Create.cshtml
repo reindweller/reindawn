@@ -1,0 +1,264 @@
+﻿@using Reindawn.Code
+@using Reindawn.Domain.Constants
+@model Reindawn.Models.IncomeViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <ul class="nav nav-tabs">
+            <li id="tabIncome" class="active"><a href="#">Income</a></li>
+            <li id="tabInvoice"><a href="#">Invoice</a></li>
+            <li id="tabPayment"><a href="#">Payment</a></li>
+            <li id="tabDetailed"><a href="#">Detailed</a></li>
+        </ul>
+
+
+        <div class="row">
+            <div class="col-xs-4 col-md-4">
+                @Html.LabelFor(model => model.Date, htmlAttributes: new {@class = "control-label"})
+                @Html.EditorFor(model => model.Date, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.Date, "", new {@class = "text-danger"})
+            </div>
+            <div class="col-xs-4 col-md-4">
+                @Html.LabelFor(model => model.CustomerId, htmlAttributes: new {@class = "control-label"})
+
+                @Html.DropDownListFor(model => model.CustomerId,
+                    new SelectList(Model.Customers, "Id", "Name", Model.CustomerId),
+                    "",
+                    new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.CustomerId, "", new {@class = "text-danger"})
+            </div>
+            <div class="col-xs-4 col-md-4">
+                @Html.LabelFor(model => model.InvoiceNo, htmlAttributes: new {@class = "control-label"})
+                @Html.EditorFor(model => model.InvoiceNo, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.InvoiceNo, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                @Html.LabelFor(model => model.PaymentAccountId, htmlAttributes: new {@class = "control-label"})
+                @Html.DropDownListFor(model => model.PaymentAccountId,
+                    new SelectList(Model.PaymentAccounts, "Id", "Name", Model.PaymentAccountId).ToAccountSelectList(),
+                    "",
+                    new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.PaymentAccountId, "", new { @class = "text-danger" })
+            </div>
+            <div id="PaymentTermsDiv" class="col-xs-4 col-md-4">
+                @Html.LabelFor(model => model.PaymentTerms)
+                @Html.DropDownListFor(m => m.PaymentTerms, Model.PaymentTerms.ToSelectList(), new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.PaymentTerms, "", new { @class = "text-danger" })
+            </div>
+
+
+        </div>
+
+        <div id="divPrepayment" class="form-group">
+            @Html.LabelFor(model => model.PrepaymentId, htmlAttributes: new {@class = "control-label col-md-6"})
+            <div class="col-md-4">
+                @Html.DropDownListFor(model => model.PrepaymentId,
+                    new SelectList(Model.PrepaymentAccounts, "Id", "Name", Model.PrepaymentId).ToAccountSelectList(),
+                    "",
+                    new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.PrepaymentId, "", new {@class = "text-danger"})
+                @Html.ValidationMessageFor(model => model.PrepaymentId, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.PrepaymentAmount, new {htmlAttributes = new {@class = "form-control text-right", onclick = "this.focus();this.select()"}})
+                @Html.ValidationMessageFor(model => model.PrepaymentAmount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="row">&nbsp;</div>
+        <div id="tableContainer">
+            <table id="ItemDetails" class="table-bordered">
+                <tr>
+                    <th class="col-md-4">
+                        Income Account
+                    </th>
+                    <th class="col-md-4">
+                        Description
+                        @*@Html.DisplayNameFor(model => model.Address)*@
+                    </th>
+                    <th class="col-md-1">
+                        Quantity
+                        @*@Html.DisplayNameFor(model => model.Phone)*@
+                    </th>
+                    <th class="col-md-2">
+                        Price
+                        @*@Html.DisplayNameFor(model => model.Email)*@
+                    </th>
+                    <th class="col-md-2">
+                        Sales Tax
+                    </th>
+                    <th class="col-md-2">
+                        Amount
+                    </th>
+                </tr>
+                @*@for (var i=0;i<Model.IncomeDetails.Count;i++){*@
+                <tr>
+                    <td>
+                        @Html.DropDownListFor(model => model.IncomeDetails[0].IncomeAccountId,
+                            new SelectList(Model.IncomeAccounts, "Id", "Name", Model.IncomeDetails[0].IncomeAccountId).ToAccountSelectList(),
+                            "",
+                            new {@class = "form-control no-border"})
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.IncomeDetails[0].Description, new {htmlAttributes = new {@class = "form-control no-border"}})
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.IncomeDetails[0].Quantity, new {htmlAttributes = new {@class = "form-control text-right no-border", onclick = "this.focus();this.select()"}})
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.IncomeDetails[0].Price, new {htmlAttributes = new {@class = "form-control text-right no-border", onclick = "this.focus();this.select()"}})
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(model => model.IncomeDetails[0].SalesTaxId,
+                            new SelectList(Model.Taxes, "Id", "Name", Model.IncomeDetails[0].SalesTaxId),
+                            "",
+                            new {@class = "form-control no-border"})
+                    </td>
+                    <td>
+
+                        @*@Html.EditorFor(model => model.IncomeDetails[i].amount, new { htmlAttributes = new { @class = "form-control" } })*@
+                    </td>
+                </tr>
+                @* } *@
+            </table>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <a href="#" id="addNewRow">Add Row</a>
+                </div>
+            </div>
+        </div>
+        <div id="divPoSo" class="row">
+            <div class="col-xs-4 col-md-4">
+                @Html.LabelFor(model => model.PoSoNo, htmlAttributes: new {@class = "control-label"})
+                @Html.EditorFor(model => model.PoSoNo, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.PoSoNo, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 col-md-4">
+                @Html.LabelFor(model => model.Terms, htmlAttributes: new {@class = "control-label"})
+                @Html.EditorFor(model => model.Terms, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.Terms, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 col-md-4">
+                @Html.LabelFor(model => model.DueDate, htmlAttributes: new {@class = "control-label"})
+                @Html.EditorFor(model => model.DueDate, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.DueDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div id="divMemo" class="row">
+            <div class="col-xs-12 col-md-12">
+                @Html.LabelFor(model => model.Memo, htmlAttributes: new {@class = "control-label"})
+                @Html.EditorFor(model => model.Memo, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.Memo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr/>
+        <div class="form-group">
+            <div class="col-md-offset-10 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section scripts {
+    <script>
+
+        function ShowHidePaymentTermsDiv() {
+            console.log($("#PaymentAccountId option:selected").text());
+            if ($("#PaymentAccountId option:selected").text().indexOf("@AccountTypeConstant.AccountsReceivable") >= 0) {
+                $("#PaymentTermsDiv").show();
+            } else {
+                $("#PaymentTermsDiv").hide();
+            }
+        }
+
+        $(function() {
+            ShowHidePaymentTermsDiv();
+            $("#PaymentAccountId").change(function() {
+                ShowHidePaymentTermsDiv();
+            });
+
+
+            $("#divPoSo").hide();
+            $("#divMemo").hide();
+            $("#divPrepayment").hide();
+
+
+            $("#addNewRow").on("click", function() {
+
+                $.get('@Url.Action("AddNewRow", "Income")', $('form').serializeArray(), function(data) {
+                    $("#ItemDetails tbody").append(data);
+                });
+
+            });
+
+            $("#tabIncome").on("click", function() {
+                $("#tabIncome").addClass("active");
+                $("#tabInvoice").removeClass("active");
+                $("#tabPayment").removeClass("active");
+                $("#tabDetailed").removeClass("active");
+                $("#divPoSo").hide();
+                $("#divMemo").hide();
+                $("#divPrepayment").hide();
+                $("#tableContainer").show();
+
+            });
+
+            $("#tabInvoice").on("click", function() {
+                $("#tabIncome").removeClass("active");
+                $("#tabInvoice").addClass("active");
+                $("#tabPayment").removeClass("active");
+                $("#tabDetailed").removeClass("active");
+                $("#divPoSo").show();
+                $("#divMemo").show();
+                $("#divPrepayment").hide();
+                $("#tableContainer").show();
+            });
+
+            $("#tabPayment").on("click", function() {
+                $("#tabIncome").removeClass("active");
+                $("#tabInvoice").removeClass("active");
+                $("#tabPayment").addClass("active");
+                $("#tabDetailed").removeClass("active");
+                $("#divPoSo").hide();
+                $("#divMemo").show();
+                $("#divPrepayment").show();
+                $("#tableContainer").hide();
+
+            });
+
+            $("#tabDetailed").on("click", function() {
+                $("#tabIncome").removeClass("active");
+                $("#tabInvoice").removeClass("active");
+                $("#tabPayment").removeClass("active");
+                $("#tabDetailed").addClass("active");
+                $("#divPoSo").show();
+                $("#divMemo").hide();
+                $("#divPrepayment").hide();
+                $("#tableContainer").show();
+            });
+
+
+        });
+
+    </script>
+}

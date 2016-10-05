@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="reindawndb-Web.config Connection String" description="reindawndb Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:reindawn.database.windows.net,1433;Initial Catalog=reindawndb;User Id=reindawnadmin@reindawn;Password=P@ssw0rd" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Arvin\\Projects\\Reindawn\ -\ API\\ReindawnApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='reindawndb']/@connectionString" />
+  </parameter>
+  <parameter name="Reindawn-Web.config Connection String" description="Reindawn Connection String used in web.config by the application to access the database." defaultValue="Reindawn_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Arvin\\Projects\\Reindawn\ -\ API\\ReindawnApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Reindawn']/@connectionString" />
+  </parameter>
+</parameters>

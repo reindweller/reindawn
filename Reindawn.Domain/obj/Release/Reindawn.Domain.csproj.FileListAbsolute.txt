@@ -1,0 +1,14 @@
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\Reindawn.Domain.dll.config
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\Reindawn.Domain.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\Reindawn.Domain.pdb
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\EntityFramework.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\EntityFramework.SqlServer.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\EntityFramework.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\EntityFramework.SqlServer.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\obj\Release\Reindawn.Domain.csprojResolveAssemblyReference.cache
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\obj\Release\Reindawn.Domain.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\obj\Release\Reindawn.Domain.pdb

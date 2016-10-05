@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reindawn App</title>
+</head>
+<body>
+
+    <div>
+        <h2>Login</h2>
+        <input type="text" id="email" />
+        <input type="text" id="password" />
+        <input type="button" value="Login" onclick="login();"/>
+    </div>
+
+    <div>
+        <h2>All Products</h2>
+    </div>
+<div>
+    <h2>Register</h2>
+    <div>
+        email:
+        <input type="text" id="regEmail"/>
+    </div>
+    <div>
+        password:
+        <input type="text" id="regPassword"/>
+    </div>
+    <div>
+        confirm password:
+        <input type="text" id="regConfirmPassword"/>
+    </div>
+    <div>
+        <input type="button" value="Register" onclick="register();" />
+    </div>
+</div>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+
+    $(document).ready(function () {
+    });
+
+    function login() {
+        console.log("login in...");
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+
+        var model = {
+            Email: email,
+            Password: password
+        };
+
+        $.ajax({
+            url: "api/user/login",
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify(model),
+            contentType: "application/json",
+            success: function (result) {
+                window.location.replace("news.html");
+            },
+            fail: function (jqXHR, textStatus, err) {
+                console.log(err);
+            }
+        });
+    }
+
+    function register() {
+        console.log("registering...");
+        var email = $('#regEmail').val();
+        var password = $('#regPassword').val();
+        var cPassword = $('#regConfirmPassword').val();
+        
+        $.ajax({
+            url: "api/user/register",
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify({ Email: email, Password: password, ConfirmPassword: cPassword }),
+            contentType: "application/json",
+            success: function (result) {
+                window.location.replace("news.html");
+            },
+            fail: function (jqXHR, textStatus, err) {
+                console.log(err);
+            }
+        });
+    }
+    </script>
+</body>
+</html>

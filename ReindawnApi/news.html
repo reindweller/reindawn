@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <div>
+        <h2>Post News</h2>
+        <input type="hidden" id="userId" />
+        <div>
+            title:
+            <input type="text" id="title" />
+        </div>
+        <div>
+            message:
+            <input type="text" id="message" />
+        </div>
+        <div>
+            <input type="button" value="Register" onclick="post();" />
+        </div>
+    </div>
+
+    <div id="news">
+
+    </div>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+    
+    $(document).ready(function () {
+        $.ajax({
+            url: "api/user/getUserId",
+            type: 'GET',
+            dataType: 'json',
+            //data: { Title: title, Message: message, DatePosted: Date() },
+            success: function (result) {
+                $("#userId").val(result);
+            },
+            fail: function (jqXHR, textStatus, err) {
+                $("#userId").val(err);
+            }
+        });
+
+        $.ajax({
+            url: "api/news",
+            type: 'GET',
+            dataType: 'json',
+            //data: { Title: title, Message: message, DatePosted: Date() },
+            success: function (result) {
+                for (i = 0; i < result.length; i++) {
+                    $("#news").append("<hr/><div>" +
+                        "<div>title: "+ result[i].Title + "</div>" +
+                        "<div>message:" + result[i].Message + "</div>" +
+                        "<div>date posted:" + result[i].DatePosted + "</div>" +
+                        "</div><hr/>");
+                }
+                
+            },
+            fail: function (jqXHR, textStatus, err) {
+                console.log(err);
+            }
+        });
+    });
+
+
+    function post() {
+        console.log("posting...");
+        var title = $('#title').val();
+        var message = $('#message').val();
+        var userId = $("#userId").val();
+        console.log(Date());
+        var model = {
+            UserId: userId,
+            Title: title,
+            Message: message,
+            DatePosted: new Date().toISOString()
+    };
+
+        $.ajax({
+            url: "api/news/postnews",
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify(model),
+            contentType: "application/json",
+            success: function (result) {
+                console.log(result);
+                //window.location.replace("forum.html");
+            },
+            fail: function (jqXHR, textStatus, err) {
+                console.log(err);
+            }
+        });
+    }
+</script>
+</body>
+</html>

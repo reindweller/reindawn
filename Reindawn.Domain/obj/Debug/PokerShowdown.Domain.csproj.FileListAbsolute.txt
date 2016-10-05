@@ -1,0 +1,10 @@
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\bin\Debug\PokerShowdown.Domain.dll.config
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\bin\Debug\PokerShowdown.Domain.dll
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\bin\Debug\PokerShowdown.Domain.pdb
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\bin\Debug\EntityFramework.dll
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\bin\Debug\EntityFramework.xml
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\obj\Debug\PokerShowdown.Domain.dll
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\obj\Debug\PokerShowdown.Domain.pdb
+C:\Arvin\Projects\PokerShowdown\PokerShowdown.Domain\obj\Debug\PokerShowdown.Domain.csprojResolveAssemblyReference.cache

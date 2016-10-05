@@ -1,0 +1,30 @@
+﻿@using Reindawn.Code
+@model Reindawn.Models.IncomeViewModel
+    @{int i = Model.IncomeDetails.Count-1;}
+<tr>
+    <td>
+        @Html.DropDownListFor(model => model.IncomeDetails[i].IncomeAccountId,
+                        new SelectList(Model.IncomeAccounts, "Id", "Name", Model.IncomeDetails[i].IncomeAccountId).ToAccountSelectList(),
+                        "",
+                        new { @class = "form-control no-border" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.IncomeDetails[i].Description, new { htmlAttributes = new { @class = "form-control no-border" } })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.IncomeDetails[i].Quantity, new { htmlAttributes = new { @class = "form-control text-right no-border", onclick = "this.focus();this.select()" } })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.IncomeDetails[i].Price, new { htmlAttributes = new { @class = "form-control text-right no-border", onclick = "this.focus();this.select()" } })
+    </td>
+    <td>
+        @Html.DropDownListFor(model => model.IncomeDetails[i].SalesTaxId,
+                        new SelectList(Model.Taxes, "Id", "Name", Model.IncomeDetails[0].SalesTaxId),
+                        "",
+                        new { @class = "form-control no-border" })
+    </td>
+    <td>
+
+        @*@Html.EditorFor(model => model.IncomeDetails[i].amount, new { htmlAttributes = new { @class = "form-control" } })*@
+    </td>
+</tr>

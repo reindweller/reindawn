@@ -1,0 +1,107 @@
+﻿@model Reindawn.Models.TaxViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TaxViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EffectiveDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EffectiveDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Registered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cumulative)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cumulative)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceivableAccountId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceivableAccountId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PayableAccountId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PayableAccountId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpenseAccountId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpenseAccountId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

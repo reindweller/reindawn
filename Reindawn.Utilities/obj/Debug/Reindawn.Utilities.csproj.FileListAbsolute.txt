@@ -1,0 +1,13 @@
+C:\Arvin\Projects\Reindawn\Reindawn.Utilities\bin\Debug\Reindawn.Utilities.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Utilities\bin\Debug\Reindawn.Utilities.pdb
+C:\Arvin\Projects\Reindawn\Reindawn.Utilities\bin\Debug\AutoMapper.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Utilities\bin\Debug\AutoMapper.xml
+C:\Arvin\Projects\Reindawn\Reindawn.Utilities\obj\Debug\Reindawn.Utilities.dll
+C:\Arvin\Projects\Reindawn\Reindawn.Utilities\obj\Debug\Reindawn.Utilities.pdb
+C:\Arvin\Projects\Reindawn\Reindawn.Utilities\obj\Debug\Reindawn.Utilities.csprojResolveAssemblyReference.cache
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Debug\Reindawn.Utilities.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Debug\Reindawn.Utilities.pdb
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Debug\AutoMapper.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Debug\AutoMapper.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\obj\Debug\Reindawn.Utilities.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\obj\Debug\Reindawn.Utilities.pdb
