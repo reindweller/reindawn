@@ -42,3 +42,19 @@ C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\bin\Debug\Microsoft.AspNet.
 C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.csprojResolveAssemblyReference.cache
 C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.dll
 C:\Arvin\Projects\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.pdb
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\Reindawn.Repository.dll.config
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\Reindawn.Repository.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\Reindawn.Repository.pdb
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\EntityFramework.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\Reindawn.Domain.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\Reindawn.Domain.pdb
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\EntityFramework.xml
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\obj\Debug\Reindawn.Repository.csprojResolveAssemblyReference.cache
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\obj\Debug\Reindawn.Repository.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Repository\obj\Debug\Reindawn.Repository.pdb

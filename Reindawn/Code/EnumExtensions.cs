@@ -22,16 +22,16 @@ namespace Reindawn.Code
                    };
         }
 
-        public static IEnumerable<SelectListItem> ToAccountSelectList(this IEnumerable<SelectListItem> items)
-        {
-            AccountService accountService = new AccountService(new UnitOfWork());
-            return from SelectListItem i in items
-                   select new SelectListItem
-                   {
-                       Text = string.Format("{0} | {1}", accountService.Find(new Guid(i.Value)).No, i.Text),
-                       Value = i.Value
-                   };
-        }
+        //public static IEnumerable<SelectListItem> ToAccountSelectList(this IEnumerable<SelectListItem> items)
+        //{
+        //    AccountService accountService = new AccountService(new UnitOfWork());
+        //    return from SelectListItem i in items
+        //           select new SelectListItem
+        //           {
+        //               Text = string.Format("{0} | {1}", accountService.Find(new Guid(i.Value)).No, i.Text),
+        //               Value = i.Value
+        //           };
+        //}
 
         public static string ToDescription(this Enum value)
         {

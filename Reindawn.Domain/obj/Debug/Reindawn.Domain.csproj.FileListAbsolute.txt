@@ -36,3 +36,16 @@ C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Iden
 C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\obj\Debug\Reindawn.Domain.dll
 C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\obj\Debug\Reindawn.Domain.pdb
 C:\Arvin\Projects\Reindawn - API\Reindawn.Domain\obj\Debug\Reindawn.Domain.csprojResolveAssemblyReference.cache
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\Reindawn.Domain.dll.config
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\Reindawn.Domain.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\Reindawn.Domain.pdb
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\EntityFramework.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\EntityFramework.xml
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\obj\Debug\Reindawn.Domain.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Domain\obj\Debug\Reindawn.Domain.pdb

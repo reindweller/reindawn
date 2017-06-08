@@ -74,22 +74,22 @@ namespace Reindawn.Controllers
         {
             if (ModelState.IsValid)
             {
-                var businessService = new BusinessService(_unitOfWork);
-                var business = new Business { Name = model.BusinessName };
-                businessService.Insert(business);
-                businessService.Save();
+                //var businessService = new BusinessService(_unitOfWork);
+                //var business = new Business { Name = model.BusinessName };
+                //businessService.Insert(business);
+                //businessService.Save();
                 
-                var accountNumbering = new AccountNumberingService(_unitOfWork);
-                accountNumbering.InsertDefaultAccountNumbering(business.Id);
+                //var accountNumbering = new AccountNumberingService(_unitOfWork);
+                //accountNumbering.InsertDefaultAccountNumbering(business.Id);
 
-                var accountTypeService = new AccountTypeService(_unitOfWork);
-                accountTypeService.InsertDefaultAccountTypes(business.Id);
+                //var accountTypeService = new AccountTypeService(_unitOfWork);
+                //accountTypeService.InsertDefaultAccountTypes(business.Id);
 
-                var accountService = new AccountService(_unitOfWork);
-                accountService.InsertDefaultAccounts(business.Id);
+                //var accountService = new AccountService(_unitOfWork);
+                //accountService.InsertDefaultAccounts(business.Id);
 
 
-                var user = new User { UserName = model.Email, Email = model.Email, BusinessId = business.Id };
+                var user = new User { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 
                 if (result.Succeeded)

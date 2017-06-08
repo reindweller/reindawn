@@ -11,3 +11,9 @@ C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Debug\AutoMapper.dll
 C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Debug\AutoMapper.xml
 C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\obj\Debug\Reindawn.Utilities.dll
 C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\obj\Debug\Reindawn.Utilities.pdb
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Utilities\bin\Debug\Reindawn.Utilities.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Utilities\bin\Debug\Reindawn.Utilities.pdb
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Utilities\bin\Debug\AutoMapper.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Utilities\bin\Debug\AutoMapper.xml
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Utilities\obj\Debug\Reindawn.Utilities.dll
+D:\Arvin\Projects\reindawn projects\reindawn\Reindawn.Utilities\obj\Debug\Reindawn.Utilities.pdb

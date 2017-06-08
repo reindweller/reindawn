@@ -12,7 +12,7 @@ using Reindawn.Service.IdentityHelper;
 namespace Reindawn.Controllers
 {
     public abstract class AbstractEntryController<TEntity, TViewModel> : Controller
-        where TEntity : AbstractBusinessDomainModel, new()
+        where TEntity : new()
         where TViewModel : class, new()
     {
 
@@ -30,8 +30,8 @@ namespace Reindawn.Controllers
 
         public virtual ActionResult Index(Guid? id = null)
         {
-            var businessId = User.Identity.GetBusinessId();
-            var records = GetService().Filter(o=>o.BusinessId == businessId).Select(AssignEntityToViewModel);
+            //var businessId = User.Identity.GetBusinessId();
+            var records = GetService().GetAll().Select(AssignEntityToViewModel);
             return View(records);
         }
 
@@ -56,8 +56,8 @@ namespace Reindawn.Controllers
             TEntity entity = AssignViewModelToEntity(viewModel);
             //var helper = new ActionResultHelper<TEntity>(typeof(TViewModel));
             //helper.Method += Add;
-            var businessId = User.Identity.GetBusinessId();
-            if (businessId != null) entity.BusinessId = businessId.Value;
+            //var businessId = User.Identity.GetBusinessId();
+            //if (businessId != null) entity.BusinessId = businessId.Value;
             Add(entity);
 
             return RedirectToAction("Index");
@@ -92,8 +92,8 @@ namespace Reindawn.Controllers
         public virtual ActionResult Edit(TViewModel viewModel)
         {
             TEntity entity = AssignViewModelToEntity(viewModel);
-            var businessId = User.Identity.GetBusinessId();
-            if (businessId != null) entity.BusinessId = businessId.Value;
+            //var businessId = User.Identity.GetBusinessId();
+            //if (businessId != null) entity.BusinessId = businessId.Value;
             //var actionExceptionHelper = new ActionResultHelper<TEntity>(typeof(TViewModel));
             //actionExceptionHelper.Method += Update;
             Update(entity);

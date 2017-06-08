@@ -20,7 +20,7 @@
                 
                 @if (Request.IsAuthenticated)
                 {
-                    @Html.ActionLink(User.Identity.GetBusinessName(), "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink(User.Identity.Name, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 }
                 else
                 {
@@ -78,64 +78,7 @@
 
     <div class="container">
         <div class="row">
-            <div id="navbarleft" class="navbar col-sm-2 navbar-inverse navbar-fixed-left">
-                <ul id="sidebar" class="nav navbar-nav nav-stacked">
-                    @*<li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Sub Menu1</a></li>
-                                <li><a href="#">Sub Menu2</a></li>
-                                <li><a href="#">Sub Menu3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Sub Menu4</a></li>
-                                <li><a href="#">Sub Menu5</a></li>
-                            </ul>
-                        </li>*@
-                    <li>@Html.ActionLink("Income", "Index", "Income")</li>
-                    <li>@Html.ActionLink("Expenses", "Index", "Expense")</li>
-                    <li>@Html.ActionLink("Transfers", "Index", "Transfer")</li>
-                    <li>@Html.ActionLink("Adjustments", "Index", "Adjustment")</li>
-                    <li>@Html.ActionLink("Check Printing", "Index", "CheckPrinting")</li>
-                    <li>@Html.ActionLink("Banking", "Index", "Banking")</li>
-                    <li>@Html.ActionLink("Fresh Books", "Index", "FreshBook")</li>
-                    <li>@Html.ActionLink("Payroll", "Index", "Payroll")</li>
-                </ul>
-
-
-
-                <div class="navbar-header navbar-custom">
-                    <a class="navbar-brand" href="#">Reports</a>
-                </div>
-                <div class="navbar-collapse-reports">
-                    <ul id="sidebar" class="nav navbar-nav nav-stacked">
-                        <li>@Html.ActionLink("Profit And Loss", "Index", "ProfitAndLoss")</li>
-                        <li>@Html.ActionLink("Balance Sheet", "Index", "BalanceSheet")</li>
-                        <li>@Html.ActionLink("Receivables", "Index", "Receivable")</li>
-                        <li>@Html.ActionLink("Payables", "Index", "Payable")</li>
-                        <li>@Html.ActionLink("Trial Balance", "Index", "TrialBalance")</li>
-                        <li>@Html.ActionLink("General Ledger", "Index", "GeneralLedger")</li>
-                        <li>@Html.ActionLink("Journal", "Index", "Journal")</li>
-                        <li>@Html.ActionLink("Activity", "Index", "Activity")</li>
-                    </ul>
-                </div>
-
-                <div class="navbar-header navbar-custom">
-                    <a class="navbar-brand" href="#">Setup</a>
-                </div>
-                <div class="navbar-collapse-setup">
-                    <ul id="sidebar" class="nav navbar-nav nav-stacked">
-                        <li>@Html.ActionLink("Business Profile", "Index", "BusinessProfile")</li>
-                        <li>@Html.ActionLink("Account", "Index", "Account")</li>
-                        <li>@Html.ActionLink("Account Type", "Index", "AccountType")</li>
-                        <li>@Html.ActionLink("Bank Feeds", "Index", "BankFeed")</li>
-                        <li>@Html.ActionLink("Taxes", "Index", "Tax")</li>
-                        <li>@Html.ActionLink("Customers", "Index", "Customer")</li>
-                        <li>@Html.ActionLink("Vendors", "Index", "Vendor")</li>
-                        <li>@Html.ActionLink("Items", "Index", "Item")</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-10">
+            <div class="col-sm-12">
                 @RenderBody()
             </div>
         </div>
